@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Types</title>
+    <style>
+        th{
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Input Types</h1>
+
+    <hr>
+
+    <table border=1>
+        <thead>
+            <tr>
+                <th>Fields</th>
+                <th>What is?</th>
+                <th>When to use?</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="text" readonly placeholder="readonly"></td>
+                <td>Only Reading</td>
+                <td>When I have some information that is not allowed to be changed</td>
+            </tr>
+            <tr>
+                <td><input type="text" disabled size="20" value="texto qualquer" placeholder="disabled"></td>
+                <td>Disabled / More explicit way to say that it doesnt accept typing</td>
+                <td>When I have some information that is really not allowed to be changed</td>
+            </tr>
+            <tr>
+                <td><input type="text" maxlength="1" placeholder="max-length"></td>
+                <td>Length Restriction</td>
+                <td>Used when I want to receive data with length restriction</td>
+            </tr>
+            <tr>
+                <td><input type="text" required placeholder="required"></td>
+                <td>Mandatory Fill</td>
+                <td>Used when You have to fill data in a form, for example</td>
+            </tr>
+            <tr>
+                <td><input type="text" autofocus placeholder="autofocus"></td>
+                <td>Receives the focus of typing when the form is charged</td>
+                <td>Used mainly in the first field to be filled</td>
+            </tr>
+            <tr>
+                <td><input type="text" autocomplete="off"></td>
+                <td>The browser help us giving some sugestions for our typing based iin previous information</td>
+                <td>Help us in security questions</td>
+            </tr>
+            <tr>
+                <td><input type="text" placeholder="list" list="infolist"></td>
+                <datalist id="infolist">
+                    <option value="value 1">
+                    <option value="value 2">
+                    <option value="value 3">
+                </datalist>
+                <td>Accept whatever information but serves us with suggestions for complements</td>
+                <td>Its useful when we have repetitive data</td>
+            </tr>
+            <tr>
+                <td><input type="text" placeholder="patterns" pattern="[A-Z]{3}-[0-9]{4}" required></td>
+                <td>Only receive data that is following the pattern previous defined</td>
+            </tr>
+
+            <br>
+
+            
+            <h2>Working with different input types</h2>
+
+            <!-- action is where im sending the information -->
+            <form action="form.php">
+                <input type="password" placeholder="your password"> <br>
+                <input type="reset" value="clean"> <br>
+                <input type="radio" name="marital-status" value="single" required> Single <br>
+                <input type="radio" name="marital-status" value="married" disabled> Married <br>
+                <input type="radio" name="marital-status" value="widower"> Widower <br>
+                <input type="button" value="Click me!" onclick="alert('Hello!');"> <br>
+                <input type="button" value="Enviar" onclick="this.form.submit();"> <br>
+                <input type="color" name="color"> <br>
+                <input type="date" min="2005-01-23" max="2023-12-31">
+                <input type="datetime-local" min="2005-01-23T00:00:00" max="2023-12-31T23:59:59"> <br>
+                <input type="month" min="2020-12" max="2021-05"> <br>
+                <input type="email" placeholder="email"> <br>
+                <input type="submit" value="Enviar"> <br>
+                <input type="file" value="Archive"> <br>
+                <input type="hidden" value="345"> <br>
+                <input type="number" placeholder="Type even values" size="40" min="2" max="1000" step="2"> <br>
+                <input type="range" min="2" max="1000" step="50"> <br>
+                <input type="search"> <br>
+                <input type="tel" name="telefone" pattern="[0-9]{2} [0-9]{5}-[0-9]{4}"> <br>
+                <input type="time" name="horaMarcada"> <br>
+                <input type="url" name="enredecoSite"> <br>
+                <input type="week" name="semanaCongresso">
+            </form>
+
+            <hr>
+
+        </tbody>
+    </table>
+</body>
+</html>
