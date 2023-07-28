@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Base</title>
+
+    <style>
+        *{
+            margin-left: 5px;
+        }
+        .form-item, #state, #canal{
+            padding-top: 10px;
+        }
+        label, legend{
+            font-size: 20px;
+        }
+        h1{
+            font-size: 40px;
+        }
+        input, select{
+            font-size: 13px;
+        }
+        .Buttons{
+            font-size: 15px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Customer Register</h1>
+
+    <hr>
+
+    <form action="/cliente/cadastrar">
+        <div class="form-item">
+            <label for="fullname">Your name</label> <br>
+            <input type="text" name="fullName" placeholder="Full Name" autofocus required id="fullname"> <br>
+        </div>
+
+        <div class="form-item">
+            <label for="email">E-mail</label> <br>
+            <input type="email" name="email" id="email" placeholder="user@domain.com" required autocomplete="on" maxlength="120"> <br>
+        </div>
+
+        <div class="form-item">
+            <label for="portfolio">Online Portfolio URL</label> <br>
+            <input type="url" name="portLink" id="portfolio" required placeholder="https://example.com" pattern="[Hh][Tt][Tt][Pp][Ss]?:\/\/(?:(?:[a-zA-Z\u00a1-\uffff0-9]+-?)*[a-zA-Z\u00a1-\uffff0-9]+)(?:\.(?:[a-zA-Z\u00a1-\uffff0-9]+-?)*[a-zA-Z\u00a1-\uffff0-9]+)*(?:\.(?:[a-zA-Z\u00a1-\uffff]{2,}))(?::\d{2,5})?(?:\/[^\s]*)?"> <br>
+        </div>
+
+        <div class="form-item">
+            <label for="birthday">Birthday</label> <br>
+            <input type="date" name="bDay" id="birthday" min="1900-01-01" max="2023-12-31" required> <br>
+        </div>
+
+        <div class="form-item">
+            <label for="nmbDep">Number of Dependents</label> <br>
+            <input type="number" min="0" max="1000" name="NumbDep" id="nmbDep" required maxlength="4" placeholder="0-1000"> <br>
+        </div>
+
+        <div class="form-item">
+            <label for="favColor">Favorite color</label> <br>
+            <input type="color" name="color" id="favColor"> <br>
+        </div>
+
+        <div class="form-item">
+            <label for="tel">Telephone Number</label> <br>
+            <input type="tel" name="tel" id="tel" required placeholder="(99) 99999-9999" pattern="[0-9]{2} [0-9]{5}-[0-9]{4}" maxlength="15"> <br>
+        </div>
+
+        <div class="form-item">
+            <input type="checkbox" name="promotions" id="chkProm" value="true" required>
+            <label for="chkProm">Receive Promotions</label> <br>
+        </div>
+
+        <div id="state">
+            <label for="slctState">Your State</label>
+            <select name="State" id="slctState">
+
+                <optgroup label="North">
+                    <option value="AM">Amazonas</option>
+                    <option value="RO">Rondônia</option>
+                </optgroup>
+
+                <optgroup label="SouthEast">
+                    <option value="ES" selected>Espírito Santo</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                </optgroup>
+
+                <optgroup label="NorthEast">
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                </optgroup>
+
+                <optgroup label="South">
+                    <option value="PR">Paraná</option>
+                    <option value="SC">Santa Catarina</option>
+                </optgroup>
+            </select>
+        </div>
+
+        <div id="canal">
+            <fieldset>
+                <legend>Where did you know us?</legend>
+
+                <input type="checkbox" name="instagram" id="InstagramCanal" value="Inst" required>
+                <label for="InstagramCanal">Instagram</label>
+                <input type="checkbox" name="instagram" id="InstagramCanal" value="Inst">
+                <label for="InstagramCanal">Whatsapp</label> <br>
+                <input type="checkbox" name="instagram" id="InstagramCanal" value="Inst">
+                <label for="InstagramCanal">Facebook</label>
+                <input type="checkbox" name="instagram" id="InstagramCanal" value="Inst">
+                <label for="InstagramCanal">Linkedin</label> <br>
+            </fieldset>
+        </div>
+
+        <div class="form-item">
+            <label for="rating">How do you rate our service?</label> <br>
+            Horrible<input type="range" min="0" max="5" name="avaluating" id="rating"> Excellent <br>
+        </div>
+
+        <div class="form-item">
+            <label for="biography">Write a little about you</label>
+            <br>
+            <textarea name="bio" id="biography" cols="30" rows="10" placeholder="I'm..."></textarea>
+        </div>
+
+        <input type="reset" name="Reset" value="clear" class="Buttons">
+        <input type="submit" value="Submit" class="Buttons">
+        
+    </form>
+
+</body>
+</html>
