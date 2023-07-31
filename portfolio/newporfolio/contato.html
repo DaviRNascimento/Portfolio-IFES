@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+
+    <style>
+      /* estilizando barra de navegação */
+      .navbar a{
+        font-size: 20px;
+        text-decoration: none;
+      }
+      .navbar a:hover{
+        text-decoration: underline;
+      }
+      /* estilizando formulário */
+      .form-item{
+        padding-bottom:20px;
+      }
+      .form-item input, #assunto{
+        height: 20px;
+      }
+      .form-item-chkbox{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-bottom: 20px;
+      }
+      .form-item fieldset .first-line, .second-line{
+        display: flex;
+        flex-direction: row ;
+        align-items: center;
+      }
+      .button{
+        font-size: 14px;
+        margin-bottom: 20px;
+      }
+   </style>
+
+</head>
+
+<body>
+
+  <!-- svg de topo de página -->
+  <img src="img/header.svg" alt="svg image" width="100%" height="150">
+
+  <hr>
+
+    <!-- Barra de Navegação -->
+    <div class="navbar">
+      <a href="index.html">Principal</a> ::
+      <a href="quemsou.html">Quem Sou</a> ::
+      <a href="projetos.html">Projetos</a> ::
+      <i><a href="contato.html">Contato</a></i> ::
+    </div>
+
+  <hr>
+
+    <!-- Lista de Canais para contato -->
+    <h1>Contato</h1>
+    <ul>
+        <li>Residente em Vitória/ES</li>
+        <li>davirnascimentox@gmail.com</li>
+        <li>(27) 992745458</li>
+        <li><a href="https://www.linkedin.com/in/davi-rodrigues-cs/">LinkedIn</a></li>
+    </ul>    
+
+  <hr>
+
+  <h2>Formulário de Contato</h2>
+
+  <form action="/cliente/form">
+
+    <!-- Nome -->
+    <div class="form-item">
+      <label for="name">Nome</label> <br>
+      <input type="text" name="Name" id="name" placeholder="Nome" autofocus required>
+    </div>
+
+    <!-- Assunto do Contato -->
+    <div class="form-item">
+      <label for="assunto">Assunto</label> <br>
+      <select name="Assnt" id="assunto" required>
+
+        <option disabled selected value="*">Selecione o assunto...</option>
+
+        <optgroup label="Vendas/Insight">
+          <option value="PW">Página Web</option>
+          <option value="BD">Definição Banco de Dados</option>
+          <option value="SAD">Sist. Análise de Dados</option>
+        </optgroup>
+
+        <optgroup label="Portfólio">
+          <option value="PP">Página web Portf.</option>
+        </optgroup>
+
+        <optgroup label="Customizado/Outros">
+          <option value="PW">Página Web</option>
+          <option value="SI">Sistema</option>
+          <option value="AA">Apps Android</option>
+          <option value="OTR">Outros</option>
+        </optgroup>
+      </select>
+    </div>
+
+    <!-- Campo de Mensagem -->
+    <div class="form-item">
+      <label for="mssg">Mensagem</label> <br>
+      <textarea name="msg" id="mssg" cols="30" rows="10" placeholder="Mensagem..."></textarea>
+    </div>
+
+    <!-- CheckBox Newsletter -->
+    <div class="form-item-chkbox">
+      <input type="checkbox" name="nwl" id="nl" value="true" required>
+      <label for="nl">Deseja receber minha newsletter?</label>
+    </div>
+
+    <!-- Onde me Encontrou -->
+    <div class="form-item">
+      <fieldset>
+        <legend>Onde me Encontrou?</legend>
+        <div class="first-line">
+          <input type="checkbox" name="Inst" id="Instagram" value="Inst" required>
+          <label for="Instagram">Instagram</label>
+
+          <input type="checkbox" name="Wts" id="Whatsapp" value="true">
+          <label for="Whatsapp">Whatsapp</label>
+        </div>
+
+        <div class="second-line">
+          <input type="checkbox" name="Fcb" id="Facebook" value="true">
+          <label for="Facebook">Facebook</label>
+
+          <input type="checkbox" name="Lkd" id="Linkedin" value="true">
+          <label for="Linkedin">Linkedin</label>
+        </div>
+      </fieldset>
+    </div>
+
+    <input type="reset" value="Limpar" class="button"> <br>
+    <input type="submit" value="Enviar" class="button">
+
+  </form>
+  
+  <!-- Rodapé da Página -->
+  <p>Copyright &copy; 2023</p>
+  <a href="https://www.ifes.edu.br" target="_blank"><img src="img/ifes.png" alt="Instituto Federal do Espírito Santo" title="IFES" height="96"></a> 
+</body>
+
+</html>
