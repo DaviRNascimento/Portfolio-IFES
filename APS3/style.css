@@ -1,0 +1,134 @@
+/* Imporiting the site's main font */
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@300&family=Handjet:wght@300&family=Sofia&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@300&family=Handjet:wght@300&family=Sofia&family=Spline+Sans+Mono:ital,wght@1,300&display=swap');
+
+* {
+    font-family: 'Albert Sans', sans-serif;
+}
+
+body {
+    background-color: #B9D6F2;
+    
+    margin: 0px;
+    padding: 0px;
+}
+
+.header {
+    background-image:  linear-gradient(0deg, #061e40, #044d7e);
+    color: #B9D6F2;
+
+    padding: 20px 0px 20px 40px;
+    gap: 20px;
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header > .header-titles > h1 {
+    font-size: 50px;
+}
+
+.header > .header-titles > h2 {
+    font-family: 'Spline Sans Mono';
+    font-weight: lighter;
+    font-size: 27px;
+}
+
+.header > .header-image {
+    width: 140px;
+    height: 140px;
+
+    border-radius: 100px;
+}
+
+.header > .header-titles {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    line-height: 1px;
+}
+
+.list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    margin: 0px;
+    padding: 60px;
+    gap: 100px;
+
+    list-style: none;
+
+}
+
+.list > .list-item a {
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: lighter;
+
+    padding: 7px;
+
+    background-color: #061e40;
+    color: #B9D6F2;
+
+    border-radius: 13px;
+
+    font-family: 'Spline Sans Mono';
+}
+
+.list > .list-item > a:hover{
+    font-weight: bolder;
+
+    padding: 9px;
+}
+
+.list > .list-item > #current-link {
+    background-color: #0353A4;
+    color: #061e40;
+
+    outline: solid 4px #061e40;
+}
+
+.presentation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.presentation > .presentation-text {
+    background-color: #061e40;
+    color: #B9D6F2;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    border-radius: 30px;
+
+    padding: 10px;
+}
+
+.presentation > .presentation-text > p {
+    font-size: 30px;
+    font-family: 'Spline Sans Mono';
+    font-weight: normal ;
+
+}
+
+.presentation > .presentation-text > h2 {
+    font-family: 'Albert Sans';
+    font-size: 30px;
+    word-wrap: break-word;
+}
+
+.presentation > .presentation-text > a {
+    font-family: 'Albert Sans';
+}
+
+
+.presentation > .presentation-image > img {
+    width: 650px;
+    height: 500px;
+    border-radius: 30px;
+}
