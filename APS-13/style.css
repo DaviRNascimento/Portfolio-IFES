@@ -49,6 +49,7 @@ a {
 ul {
     display: flex;
     flex-direction: column;
+    padding-left: 60px;
 }
 
 ul li::marker {
