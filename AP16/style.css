@@ -1,0 +1,52 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    width: 1000px;
+    height: 1000px;
+}
+
+.center {
+    background-color: black;
+    width: 400px;
+    height: 400px;
+
+    position: absolute;
+    top: 200px;
+    left: 300px;
+}
+
+.div1 {
+    background-color: green;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.div2 {
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 150px;
+    left: 150px;
+}
+
+.div3 {
+    background-color: yellow;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+
+.footer {
+    background-color: lightblue;
+    width: 1000px;
+    height: 200px;
+
+    position: absolute;
+    top: 800px;
+}
