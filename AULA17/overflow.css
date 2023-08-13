@@ -1,0 +1,40 @@
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+div {
+    background-color: gainsboro;
+
+    display: inline-block;
+    vertical-align: top;
+    margin: 10px;
+    padding: 10px;
+    
+    width: 150px;
+    height: 200px;
+}
+
+.div1 {
+    position: absolute;
+    top: 300px;
+
+    /* default setting */
+    overflow: visible;
+}
+
+.div2 {
+    overflow: hidden;
+}
+
+.div3 {
+    overflow: scroll;
+}
+
+.div4 {
+    /* in the case below, the browser identifies that only the vertical scroll is necessary */
+    overflow: auto;
+
+    /* if I wamted to add just a vertical scroll, the setting is the following */
+    overflow-y: scroll;
+}

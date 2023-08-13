@@ -1,0 +1,18 @@
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+p > img {
+    /* The element is over the container but not over the container's content */
+    margin-right: 10px;
+    height: 135px;
+    float: left;
+    opacity: 0.5;
+}
+
+p {
+    font-size: 15px;
+    background-color: lightcoral;
+    overflow: hidden;
+}

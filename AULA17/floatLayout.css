@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    background-color: #333;
+}
+
+header h1 {
+    float: left;
+    color: white;
+    margin: 0;
+    padding: 5px 20px 0px 20px;
+}
+
+header ul {
+    background-color: #333;
+
+    /* defining the markers type */
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+
+    /* ul is not considering 'li' elements to compute the height */
+    overflow: hidden;
+}
+
+header li {
+    float: left;
+}
+
+header li a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+
+    padding: 14px 16px;
+}
+
+header li a:hover {
+    background-color: #111;
+}
+
+header li a.active {
+    background-color: red;
+}
+
+main aside {
+    background-color: rgb(245,245,231);
+    height: calc(100vh - 44px);
+    width: 215px;
+    float: left;
+}
