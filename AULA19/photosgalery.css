@@ -1,0 +1,42 @@
+body {
+    margin: 10px;
+}
+
+main > div {
+    /* centralize the elements inside the container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main > div > img {
+    /* defined to occupie 100% of their divs */
+    width: 100%;
+    height: 100%;
+
+    /* show enough part of the image to fill the img area, keeping the original proportions */
+    object-fit: cover;
+}
+
+main {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-auto-rows: 100px;
+
+    /* to fill empty-spaces */
+    grid-auto-flow: dense;
+}
+
+.horizontal {
+    grid-column: span 2;
+}
+
+.vertical {
+    grid-row:  span 2;
+}
+
+.square {
+    grid-column: span 2;
+    grid-row: span 2;
+}
